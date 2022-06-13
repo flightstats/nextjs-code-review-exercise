@@ -4,7 +4,6 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
-  const [query, setQuery] = useState(null)
   const [data, setData] = useState(null)
   const [isLoading, setLoading] = useState(false)
 
@@ -20,9 +19,8 @@ const Home: NextPage = () => {
 
     fetch(`api/calculate-flight-time?depapcode=${depapcode.value}&depdate=${depdate.value}&deptime=${deptime.value}&arrapcode=${arrapcode.value}&arrdate=${arrdate.value}&arrtime=${arrtime.value}`)
       .then((res) => res.json())
-      .then((data) => {
-        console.log('data', data)
-        setData(data)
+      .then((resData) => {
+        setData(resData)
         setLoading(false)
       })
   }
