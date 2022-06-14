@@ -1,34 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This repo provides a space for a simple application to be used for an interactive pull/merge request interview exercise.
 
-## Getting Started
+## Application Tech
 
-First, run the development server:
+The application is a NextJS app with Typescript and CSS loader support. It was generated using `npx create-next-app@latest --typescript`.
 
-```bash
-npm run dev
-# or
-yarn dev
+## User Story
+
+The proposed solution in the PR sets out to solve this story:
+
+As a user, I'd need to calculate the flight time in hours and minutes given a departure airport, departure date/time,arrival airport, and arrival date/time given the following airport/time zone data:
+
+```
+[
+  ["PDX", '-07:00'],
+	["FRA", '+02:00'],
+	["LGW", '+00:00'],
+	["BOS", '-04:00'],
+	["LAX", '-07:00'],
+	["SLC", '-06:00'],
+	["SEA", '-07:00'],
+	["SFO", '-07:00']
+]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
