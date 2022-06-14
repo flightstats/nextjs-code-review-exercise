@@ -3,11 +3,15 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
+interface IData {
+  flightTime: string;
+}
+
 const Home: NextPage = () => {
-  const [data, setData] = useState(null)
+  const [data, setData] = useState<IData>({ flightTime: '' })
   const [isLoading, setLoading] = useState(false)
 
-  const submitForm = ({ target }) => {
+  const submitForm = ({ target: { elements } }) => {
     const {
       depapcode,
       depdate,
@@ -15,7 +19,7 @@ const Home: NextPage = () => {
       arrapcode,
       arrdate,
       arrtime,
-    } = target.elements
+    } = elements
 
     fetch(`api/calculate-flight-time?depapcode=${depapcode.value}&depdate=${depdate.value}&deptime=${deptime.value}&arrapcode=${arrapcode.value}&arrdate=${arrdate.value}&arrtime=${arrtime.value}`)
       .then((res) => res.json())
