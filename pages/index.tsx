@@ -36,21 +36,35 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <iframe name="dummyframe" id="dummyframe" style={{display: 'none' }} />
         <form onSubmit={submitForm} target="dummyframe">
-          <label htmlFor='depapcode'>Departure Airport Code:</label>
-          <input type='text' id='depapcode' name='depapcode'/><br/>
-          <label htmlFor='depdate'>Departure Date:</label>
-          <input type='date' id='depdate' name='depdate'/><br/>
-          <label htmlFor='deptime'>Departure Time (Local):</label>
-          <input type='time' id='deptime' name='deptime'/><br/>
-          <label htmlFor='arrapcode'>Arrival Airport Code:</label>
-          <input type='text' id='arrapcode' name='arrapcode'/><br/>
-          <label htmlFor='arrdate'>Arrival Date:</label>
-          <input type='date' id='arrdate' name='arrdate'/><br/>
-          <label htmlFor='arrtime'>Arrival Time (Local):</label>
-          <input type='time' id='arrtime' name='arrtime'/><br/>
-          <input type='submit' value='Submit'/>
+          <p>
+            <label htmlFor='depapcode'>Departure Airport Code:</label>
+            <input type='text' id='depapcode' name='depapcode'/>
+          </p>
+          <p>
+            <label htmlFor='depdate'>Departure Date:</label>
+            <input type='date' id='depdate' name='depdate'/>  
+          </p>
+          <p>
+            <label htmlFor='deptime'>Departure Time (Local):</label>
+            <input type='time' id='deptime' name='deptime'/>  
+          </p>
+          <p>
+            <label htmlFor='arrapcode'>Arrival Airport Code:</label>
+            <input type='text' id='arrapcode' name='arrapcode'/>
+          </p>
+          <p>
+            <label htmlFor='arrdate'>Arrival Date:</label>
+            <input type='date' id='arrdate' name='arrdate'/>
+          </p>
+          <p>
+            <label htmlFor='arrtime'>Arrival Time (Local):</label>
+            <input type='time' id='arrtime' name='arrtime'/>
+          </p>
+          <p>
+            <input type='submit' value='Submit'/>
+          </p>
         </form>
-        <p>{data ? data.flightTime : ''}</p>
+        <p>{data ? `Flight Time: ${data.flightTime}` : ''}</p>
       </main>
 
       <footer className={styles.footer}>
