@@ -13,13 +13,13 @@ As a user, I'd need to calculate the flight time in hours and minutes given a de
 ```
 [
   ["PDX", '-07:00'],
-	["FRA", '+02:00'],
-	["LGW", '+00:00'],
-	["BOS", '-04:00'],
-	["LAX", '-07:00'],
-	["SLC", '-06:00'],
-	["SEA", '-07:00'],
-	["SFO", '-07:00']
+  ["FRA", '+02:00'],
+  ["LGW", '+00:00'],
+  ["BOS", '-04:00'],
+  ["LAX", '-07:00'],
+  ["SLC", '-06:00'],
+  ["SEA", '-07:00'],
+  ["SFO", '-07:00']
 ]
 ```
 
